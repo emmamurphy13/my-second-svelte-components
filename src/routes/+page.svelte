@@ -8,11 +8,26 @@ This is your page!
   import ArticleBody from '$lib/components/ArticleBody.svelte';
   import Image from '$lib/components/Image.svelte';
   import RelatedLinks from '$lib/components/RelatedLinks.svelte';
+  import MoreToDiscover from '$lib/components/MoreToDiscover.svelte';
+  import FunFactPanel from '$lib/components/FunFactPanel.svelte';
+  import AuthorBio from '$lib/components/AuthorBio.svelte';
+
 
   // Article metadata
-  let headline = 'Become a force for good. Join our next class.';
+  let headline = 'Emma Murphy and her spreadsheets.';
   let byline = 'NYCity News Service';
   let pubDate = '2026-01-31';
+
+  // Author information
+  const authorInfo = {
+    name: 'Ben Welsh',
+    photo: '/welsh.avif',
+    bio: 'Ben Welsh is the editor of the News Applications Team at Reuters, where he leads a group of journalist-programmers who build data-driven investigations and interactive graphics.',
+    email: '',
+    portfolio: 'https://www.reuters.com/authors/ben-welsh/',
+    linkedin: '',
+    note: 'Professor Welsh generously wrote bios about all of his students, including Emma, for the NYC News Service.'
+  };
 
   // Related stories
   const relatedStories = [
@@ -20,6 +35,62 @@ This is your page!
     { headline: 'How to install, configure and use Visual Studio Code, GitHub and Copilot', href: 'https://palewi.re/docs/coding-the-news/scripts/week-1/' },
     { headline: "How to publish a website with Node.JS and GitHub Actions", href:"https://palewi.re/docs/coding-the-news/scripts/week-2/"},
   ];
+
+  // More to discover articles
+  const moreToDiscoverArticles = [
+    {
+      id: 1,
+      image: '/niemen.webp',
+      title: 'These Newsrooms Are Trying to Boost Trust Through Transparency',
+      category: 'Media',
+      description: 'Across the world, newsrooms are experimenting with radical transparency—from ethics boxes to detailed methodology sharing—to rebuild trust with skeptical audiences.',
+      author: 'Gretel Kahn',
+      label: null,
+      href: 'https://www.niemanlab.org/2025/05/these-newsrooms-are-trying-to-boost-trust-through-transparency-is-it-working/'
+    },
+    {
+      id: 2,
+      image: '/reporter.webp',
+      title: 'New Reporter on Data Journalism Team',
+      category: 'Career',
+      description: 'Matt Zdun joins The New York Times Data Journalism team to cover the federal government and political campaigns, bringing experience from The Houston Chronicle.',
+      author: 'Jeremy Singer-Vine',
+      label: null,
+      href: 'https://www.nytco.com/press/new-reporter-on-data-journalism-team/'
+    },
+    {
+      id: 3,
+      image: '/front.webp',
+      title: 'FRONTLINE and Newmark J-School Announce 2026 Tow Journalism Fellow',
+      category: 'Education',
+      description: 'Leo Miranda, a Newmark J-School graduate specializing in data journalism and local accountability reporting, has been selected as a 2026 Tow Journalism Fellow.',
+      author: 'FRONTLINE',
+      label: null,
+      href: 'https://www.pbs.org/wgbh/frontline/announcement/frontline-and-newmark-j-school-announce-2026-tow-journalism-fellow/'
+    }
+  ];
+
+  // Fun facts for the side panel
+  const funFacts = [
+    {
+      text: 'Emma desperately wants a cat',
+      
+    },
+    {
+      text: "Emma's favorite book is \"My Brilliant Friend\".",
+      
+    },
+    {
+      text: 'Emma grew up in Syracuse, NY.',
+      
+    },
+    {
+      text: 'Emma has an obsession with the Statue of liberty and Ellis Island.',
+      
+    },
+    
+  ];
+
 </script>
 
 <!-- This sets the page title in the browser tab -->
@@ -40,56 +111,56 @@ This is your page!
 
   <!-- Lead Image: Animated gif of students at the journalism school -->
   <Image
-    src="/example-photo.gif"
-    alt="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
-    caption="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
-    credit="Craig Newmark Graduate School of Journalism"
+    src="/sheets.webp"
+    alt="A platform Emma Murphy uses frequently in her work."
+    caption="A platform Emma Murphy uses frequently in her work."
+    credit="Google"
   />
+
+  <!-- Author Bio: Photo, description, and links -->
+  <AuthorBio author={authorInfo} />
 
   <!-- Article Body: The main story text with proper typography -->
   <ArticleBody>
     <p>
-      At the Craig Newmark Graduate School of Journalism at the City University of New York, change is in our DNA. That comes of being born in 2006, as the digital revolution was transforming our profession in ways none of us could have imagined.
+      Emma Murphy is a student at the Craig Newmark Graduate School of Journalism at CUNY, aspiring to become a data journalist. With a keen interest in using spreadsheets and data analysis tools to uncover hidden stories, Emma represents a new generation of journalists who are equipped with both traditional reporting skills and modern technical expertise.
     </p>
 
     <p>
-      We fashioned a school to teach the latest storytelling, entrepreneurial, and technological skills alongside reporting, writing, and ethics. Beyond that, we’ve crafted a culture that spurns complacency, that isn’t afraid to pivot before the ground under us shifts.
+      She is passionate about using data to uncover stories that matter and is excited to be part of a community of journalists who are dedicated to making a positive impact in the world. Her work focuses on finding patterns in large datasets that reveal insights about society, economics, and policy.
     </p>
 
     <p>
-      Our mission is to serve the public interest – by training new journalists from varied economic, racial, and cultural backgrounds who will bring much-needed diversity to newsrooms, by helping mid-career journalists retool their skills, and by partnering with other media organizations to find new paths to excellence.
+      Transparency is under threat in the news industry. Murphy deeply believes in supporting reporting that aims to be objective. She advocates for newsrooms to show their work, explaining methodologies and sources so audiences can understand how journalists reached their conclusions. This approach builds trust through clarity and accountability.
     </p>
 
     <p>
-      Our low tuition rates, along with the added backing of private donors, allow candidates for our master’s degrees in journalism and engagement journalism to receive a world-class education at an affordable price. We also offer a unique bilingual master’s in journalism for students fluent in English and Spanish.
+      In her own reporting, Murphy most enjoys covering the economics of her favorite place: New York City. She has explored topics ranging from housing policy to public transit infrastructure, using spreadsheet analysis to give context and depth to her stories. Her work exemplifies the power of combining traditional journalism with data-driven investigation.
     </p>
 
     <p>
-      Our three media centers provide research, training, thought leadership, industry meet-ups, and financial support for quality journalistic work.
-    </p>
-
-    <p>
-      We also offer a robust professional education program through regular evening and weekend workshops. And we support in-depth reporting projects of professional journalists through fellowship grants.
-    </p>
-
-    <p>
-      Classes are led by accomplished full-time faculty and adjuncts, who tap their networks to help students and graduates find internships, freelance opportunities and — the ultimate prize — jobs.
-    </p>
-
-    <p>
-      At a time when our profession is reeling from financial pressures and lack of trust, the Newmark Graduate School of Journalism is committed to producing the next generation of skilled, ethically minded, and diverse journalists.
-    </p>
-
-    <p>
-      We invite you to be part of our world.
+      As a student at the Newmark J-School, Murphy has learned that data journalism is not just about numbers and charts—it's about storytelling. Every dataset has a human story waiting to be discovered, and her goal is to use her skills to tell those stories in ways that inform and engage audiences.
     </p>
   </ArticleBody>
 
-  <!-- Related Stories: Links to other articles -->
-  <RelatedLinks
-    title="Related Stories"
-    links={relatedStories}
-  />
+  <!-- Article Body with Sidebar Layout -->
+  <div class="article-with-sidebar">
+    <div class="article-main">
+      <!-- Related Stories: Links to other articles -->
+      <RelatedLinks
+        title="Related Stories"
+        links={relatedStories}
+      />
+    </div>
+    
+    <!-- Fun Fact Panel: Interesting side information -->
+    <aside class="article-sidebar">
+      <FunFactPanel facts={funFacts} />
+    </aside>
+  </div>
+
+  <!-- More to Discover: Additional reading suggestions -->
+  <MoreToDiscover articles={moreToDiscoverArticles} />
 
 </div>
 
@@ -97,5 +168,45 @@ This is your page!
   /* Styles here only apply to this page */
   .container {
     padding: var(--spacing-lg) var(--spacing-md);
+    position: relative;
+  }
+
+  .article-with-sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  .article-main {
+    min-width: 0;
+    max-width: 800px;
+  }
+
+  .article-sidebar {
+    position: fixed;
+    right: 2rem;
+    top: 200px;
+    width: 280px;
+  }
+
+  /* Tablet: Stack vertically */
+  @media (max-width: 1200px) {
+    .article-sidebar {
+      position: static;
+      width: auto;
+      margin-top: 2rem;
+    }
+
+    .article-with-sidebar {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Mobile: Stack vertically */
+  @media (max-width: 768px) {
+    .article-sidebar {
+      position: static;
+      width: auto;
+    }
   }
 </style>

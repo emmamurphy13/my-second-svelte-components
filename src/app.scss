@@ -11,21 +11,21 @@
    CSS Custom Properties
    =========================================== */
 :root {
-  /* NYCity News Service Colors */
-  --color-cuny-blue: #0033A1;     /* CUNY Blue (PMS 286) */
-  --color-accent: #0033A1;        /* CUNY Blue as accent */
-  --color-accent-hover: #002880;
+  /* Vintage Google Sheets Green Color Palette */
+  --color-cuny-blue: #34a853;     /* Google Sheets green */
+  --color-accent: #34a853;        /* Google Sheets green as accent */
+  --color-accent-hover: #2d8e47;  /* Darker Google Sheets green */
   --color-dark: #1a1a1a;
-  --color-text: #333333;
-  --color-white: #ffffff;
-  --color-light-gray: #f5f5f5;
-  --color-medium-gray: #666666;
-  --color-border: #e0e0e0;
-  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-text: #1f3a1f;
+  --color-white: #faf8f3;
+  --color-light-gray: #e8dfd0;
+  --color-medium-gray: #6b5d52;
+  --color-border: #9f9577;
+  --color-shadow: rgba(52, 168, 83, 0.15);
   
-  /* CUNY Blue Gradient Colors */
-  --color-cuny-blue-dark: #002266;
-  --color-cuny-blue-light: #0066CC;
+  /* Vintage Green Gradient Colors */
+  --color-cuny-blue-dark: #2d8e47;
+  --color-cuny-blue-light: #52b788;
 
   /* Typography */
   --font-serif: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
@@ -77,7 +77,8 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-text);
-  background-color: var(--color-white);
+  background: linear-gradient(135deg, #f5f1e8 0%, #e8dfd0 100%);
+  background-attachment: fixed;
 }
 
 /* ===========================================
@@ -114,13 +115,13 @@ p {
 }
 
 a {
-  color: var(--color-dark);
+  color: #34a853;
   text-decoration: underline;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--color-accent);
+  color: #2d8e47;
 }
 
 img {

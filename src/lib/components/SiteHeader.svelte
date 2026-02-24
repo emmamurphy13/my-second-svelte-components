@@ -89,31 +89,37 @@ SiteHeader.svelte — NYCity News Service Style Header
   .logo-text {
     display: inline-flex;
     align-items: stretch;
-    border: 1px solid var(--color-white);
+    border: 2px solid var(--color-white);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   .logo-nycity {
     background-color: var(--color-white);
-    color: var(--color-accent);
-    font-family: var(--font-sans);
+    color: #34a853;
+    font-family: 'Georgia', serif;
     font-size: var(--font-size-sm);
-    font-weight: 800;
-    padding: 0.15rem 0.35rem;
-    letter-spacing: 0.02em;
+    font-weight: 700;
+    padding: 0.3rem 0.5rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    font-style: italic;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   }
 
   .logo-news-service {
     color: var(--color-white);
-    font-family: var(--font-sans);
-    font-size: var(--font-size-sm);
-    font-weight: 300;
-    padding: 0.15rem 0.35rem;
-    letter-spacing: -0.01em;
+    font-family: 'Georgia', serif;
+    font-size: var(--font-size-xs);
+    font-weight: 400;
+    padding: 0.3rem 0.5rem;
+    letter-spacing: 0.05em;
     display: flex;
     align-items: center;
+    text-transform: uppercase;
+    font-style: italic;
   }
 
   /* Navigation - hidden on mobile */
