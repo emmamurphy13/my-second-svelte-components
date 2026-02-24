@@ -131,7 +131,7 @@ This is your page!
     </p>
 
     <p>
-      Transparency is under threat in the news industry. Murphy deeply believes in supporting reporting that aims to be objective. She advocates for newsrooms to show their work, explaining methodologies and sources so audiences can understand how journalists reached their conclusions. This approach builds trust through clarity and accountability.
+      Transparency is under threat in the news industry. Murphy deeply believes in supporting reporting that aims to be objective. She advocates for newsrooms to show their work, explain methodologies and sources so audiences can understand how journalists reached their conclusions. This approach builds trust through clarity and accountability.
     </p>
 
     <p>
